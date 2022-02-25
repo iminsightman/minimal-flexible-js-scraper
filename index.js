@@ -17,11 +17,14 @@ class DatasetCollector {
         this.fs.writeFileSync(this.filename, JSON.stringify(this.records, null, 4));
     }
 }
-let agent = new ScraperAgent(true);
-let dataset = new DatasetCollector("test");
-
-agent.scrap("https://www.imdb.com/chart/top/?ref_=nv_mv_250", new ScraperProcessor(".titleColumn > a", true)).then((movieLinks) => {
-    movieLinks.forEach((movieLink) => {
-	dataset.collect(movieLink);
-    });
+let agent = new ScraperAgent();
+let dataset = new DatasetCollector("example-results");
+agent.scrap("https://www.imdb.com/chart/top/?ref_=nv_mv_250", [
+  new ScraperProcessor(".titleColumn > a", true),
+  new ScraperProcessor(".titleColumn > .secondaryInfo", true)
+]).then((scraped) => {
+  for (let i=0; i<scraped[0].length; i++) {
+    dataset.collect(scraped[0][i]+" "+scraped[1][i]);
+    console.log(scraped[0][i]+" "+scraped[1][i]);
+  };
 });
