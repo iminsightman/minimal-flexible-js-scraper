@@ -1,0 +1,29 @@
+{
+  "name": "minimal-flexible-js-scraper",
+  "version": "1.0.0",
+  "description": "A minimal, comprehensive and object-oriented web scraper written in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iminsightman/minimal-flexible-js-scraper.git"
+  },
+  "keywords": [
+    "web",
+    "scraper"
+  ],
+  "author": "Mahdi Nasehiyan",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/iminsightman/minimal-flexible-js-scraper/issues"
+  },
+  "homepage": "https://github.com/iminsightman/minimal-flexible-js-scraper#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0"
+  }
+}
