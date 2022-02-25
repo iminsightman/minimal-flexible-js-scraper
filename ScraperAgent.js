@@ -5,7 +5,9 @@ class ScraperAgent {
         this.n = n;
         this.runs = 0;
         this.randomUseragent = require('random-useragent');
-        this.userAgent = this.randomUseragent.getRandom();
+        this.userAgent = this.randomUseragent.getRandom(function (ua) {
+	         return ua.browserName === 'Firefox';
+        });
     }
     getUserAgent() {
         if (this.dynamic && this.runs == this.n) {
