@@ -20,7 +20,7 @@ class DatasetCollector {
 let agent = new ScraperAgent(true);
 let dataset = new DatasetCollector("test");
 
-agent.scrap("https://www.imdb.com/chart/top/?ref_=nv_mv_250", new ScraperProcessor(".titleColumn > a", false, "href")).then((movieLinks) => {
+agent.scrap("https://www.imdb.com/chart/top/?ref_=nv_mv_250", new ScraperProcessor(".titleColumn > a", true)).then((movieLinks) => {
     movieLinks.forEach((movieLink) => {
 	dataset.collect(movieLink);
     });
