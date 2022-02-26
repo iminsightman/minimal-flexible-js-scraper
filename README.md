@@ -1,4 +1,4 @@
-# Minimal Flexible Web Scraper written in JS
+# Light-weight Async web scraper written in JS
 A minimal, comprehensive and object-oriented web scraper written in JS.
 It is an extremely light-weight package made up of only 2 classes. It will do the boring stuff for you, e.g. http-requests and html-parsing; and you can just focus on extracting the desired data.
 ## Installation
