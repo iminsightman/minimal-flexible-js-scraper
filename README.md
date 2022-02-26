@@ -15,7 +15,7 @@ npm install
 ## Usage
 The package contains 2 classes: `ScraperAgent` and `ScraperProcessor`<br>
 As the names might imply, `ScraperAgent` is the main class, it can fetch, and parse web-pages. As for data extraction, that is the job of `ScraperProcessor`; You can attach as many as `ScraperProcessor` instances to a single `ScraperAgent` instance. `ScraperProcessor` uses the power of `JQuery` to extract any desired data. You can pass JQuery selector strings to `ScraperProcessor`'s constructor.
-<br>
+<br><br>
 Enough talking. let's see a simple example. This code will extract the movie names and their release years from IMDB's top 250 movies page:
 <br>
 ```js
